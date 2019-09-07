@@ -10,8 +10,6 @@ import pandas as pd
 
 import matplotlib.pyplot as plt
 
-import jinja2 as jj
-
 #initialize two dataframes using the loan_data.csv file and the home_ownership.csv file
 loan_data = pd.read_csv('loan_data.csv', delimiter = ',')
 
