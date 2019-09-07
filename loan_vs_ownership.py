@@ -37,9 +37,8 @@ for i in OWN_OWNERS["member_id"]:
 #Create a dataframe that contains two series: home ownership type data and average loan amount data
 results = pd.DataFrame({'home_ownership':["MORTGAGE","RENT","OWN"], 'loan_amount':[np.mean(MORTGAGE_total),np.mean(RENT_total),np.mean(OWN_total)]})
 print(results)
+
 #Using df.plot method to plot a bar graph, with the x axis being home ownership type and the y axis being the average loan amount
-plt.table(cellText = results.values, colWidths = [0.25]*len(results.columns), rowLabels=results.index, colLabels = results.columns, cellLoc = 'center', rowLoc = 'center', loc = 'bottom')
-fig = plt.gcf()
 
 graph = results.plot.bar(x='home_ownership', y='loan_amount', rot=0, title="Average loan amounts per home ownership")
 graph.set_xlabel("Home Ownership Type", fontsize=12)
